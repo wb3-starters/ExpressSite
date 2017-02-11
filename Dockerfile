@@ -20,7 +20,7 @@ FROM node:latest
 MAINTAINER Bill Bensing
 
 # Set container environment variables so ExpressSite can use these
-ENV NODE_ENV="production" PORT=3000
+ENV NODE_ENV="development" PORT=3000
 
 # Copy all files from locaal directory into volume directory '/var/www' of image
 COPY . /var/www
