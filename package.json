@@ -4,7 +4,7 @@
   "description": "A simple starter application using Express and configured for a docker image",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "start": "node server.js",
     "test": "test"
   },
   "repository": {

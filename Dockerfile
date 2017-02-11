@@ -20,7 +20,7 @@ FROM node:latest
 MAINTAINER Bill Bensing
 
 # Set container environment variables so ExpressSite can use these
-ENV NODE_ENV="development" PORT=8080
+ENV NODE_ENV="development" PORT=3000
 
 # Copy all files from locaal directory into volume directory '/var/www' of image
 COPY . /var/www
@@ -29,7 +29,7 @@ COPY . /var/www
 WORKDIR /var/www
 
 # Install NPM dependenceis once image is running as a container
-RUN npm install
+RUN npm install && node dbSeeder.js
 
 #Let DockerEngine communicate with app on this port; uses port set in Environment Variable $PORT
 EXPOSE $PORT
