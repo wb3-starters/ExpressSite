@@ -1,7 +1,8 @@
-version: '1'
+version: '2'
 
 services:
     node:
+        container_name: node_container
         build:
             context: .
             dockerfile: Dockerfile
