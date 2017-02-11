@@ -29,7 +29,7 @@ COPY . /var/www
 WORKDIR /var/www
 
 # Install NPM dependenceis once image is running as a container
-RUN npm install && node dbSeeder.js
+RUN npm install
 
 #Let DockerEngine communicate with app on this port; uses port set in Environment Variable $PORT
 EXPOSE $PORT
